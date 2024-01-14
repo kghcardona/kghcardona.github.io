@@ -3,15 +3,15 @@ const myImage = document.querySelector("img");
 
 myImage.onclick = () => {
   const mySrc = myImage.getAttribute("src");
-  if (mySrc === "images/firefox-logo.jpeg") {
-    myImage.setAttribute("src", "images/firefox.jpeg");
+  if (mySrc === "images/data2.jpeg") {
+    myImage.setAttribute("src", "images/books.jpeg");
   } else {
-    myImage.setAttribute("src", "images/firefox-logo.jpeg");
+    myImage.setAttribute("src", "images/data2.jpeg");
   }
 };
 
 let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
+let myHeading = document.querySelector("h2");
 
 function setUserName() {
     const myName = prompt("Please enter your name.");
@@ -19,7 +19,7 @@ function setUserName() {
       setUserName();
     } else {
       localStorage.setItem("name", myName);
-      myHeading.textContent = `Mozilla is cool, ${myName}`;
+      myHeading.textContent = `Hi, ${myName}`;
     }
   }
 
@@ -27,7 +27,7 @@ function setUserName() {
     setUserName();
   } else {
     const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Mozilla is cool, ${storedName}`;
+    myHeading.textContent = `Hi, ${storedName}`;
   }
 
   myButton.onclick = () => {
